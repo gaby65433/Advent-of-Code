@@ -33,44 +33,6 @@ test_input = """47|53
 97,13,75,29,47
 """
 
-
-#def getRules(rules):
-#    rulesL = []
-#
-#    position = {}
-#    for rule in rules:
-#        left, right = list(map(int, rule.split("|")))
-#        if left not in position and right not in position:
-#            position[left] = len(position)
-#            position[right] = len(position)
-#
-#        elif left not in position and right in position:
-#            for key in position:
-#                if position[key] > position[right]:
-#                    position[key] += 1
-#            
-#            position[left] = position[right]
-#            position[right] += 1
-#
-#        elif left in position and right not in position:
-#            position[right] = len(position)
-#        else:
-#            if position[left] > position[right]:
-#                prev = position[left]
-#                for key in position:
-#                    if position[key] > position[right] and position[key] < prev:
-#                        position[key] += 1
-#
-#                position[left] = position[right]
-#                position[right] += 1
-#
-#    print(position)
-#
-#    rulesL = [k for k, v in sorted(position.items(), key=lambda item: item[1])]
-#
-#    return rulesL
-
-
 def part1(text):
 
     sections = text.split("\n\n")
